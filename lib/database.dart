@@ -93,8 +93,7 @@ class DatabaseHelper {
   //login here
   Future<Student> login(String email, String pass) async {
     final db = await database;
-    var res = await db.rawQuery("SELECT * FROM user WHERE $EMAIL = '$email' and $PASS = '$pass'");
-    
+    var res=await db.query('$TABLE_NAME',where:'$EMAIL=? and $PASS=?',whereArgs:[email,pass]);
     if (res.length > 0) {
       return Student.fromMap(res.first);
     }
