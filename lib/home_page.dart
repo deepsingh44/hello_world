@@ -117,7 +117,7 @@ class MyHome extends StatelessWidget {
               children: [
                 Container(
                   width: MediaQuery.of(context).size.width,
-                  child: Text("Main Menu",style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold),),
+                  child: Text("Main Menu",style: TextStyle(fontSize: 21,fontWeight: FontWeight.bold),),
                 ),
                 SingleChildScrollView(
                   scrollDirection: Axis.horizontal,
